@@ -1,0 +1,130 @@
+/*#contacts-content:not(:target), #about-content:not(:target)
+{
+    display: none;
+    }
+
+#main-content:target {
+    display: block;
+
+}*/
+
+
+
+    body {
+        margin: 0;
+        display: flex;
+        min-height: 100vh;
+    }
+
+    nav {
+        flex-basis: 200px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        color: #fefffd;
+        background-color: purple;
+
+    }
+
+    section {
+        flex-grow: 1;
+        padding: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-top: 30px;
+
+    }
+
+    li {
+        padding-top: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fefffd;
+        font-family: monospace;
+        font-size: 13pt;
+    }
+
+    #main:before {
+        content: "\2297\a0";
+        color: #b6ff07;
+    }
+
+    #about:before {
+        content: "?? ";
+        color: #b6ff07;
+    }
+
+    #contacts:before {
+        content: "\260e \a0";
+        color: #b6ff07;
+    }
+
+    #facebook:before {
+        content: "f \a0";
+        color: #b6ff07;
+    }
+
+
+@media only screen and (min-width: 841px) {
+    a[target^="_blank"]::after {
+        content: "\a0 \2261";
+        color: #b6ff07;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 320px) {
+    body {
+        display: inline-block;
+        }
+
+    ul {
+        padding: 0;
+        text-align: center;
+        margin: 0;
+    }
+
+    li {
+        display: inline-block;
+        padding: 5px;
+        margin: 0px !important;
+    }
+
+
+    nav {
+        display: block;
+        min-height: 30px;
+
+    }
+span {
+    display: none;
+}
+}
+
+
+@media only screen and (max-width: 840px) {
+
+    span {
+        display: none;
+    }
+    ul {
+        padding: 10px;
+    }
+    li {
+        margin-top: 20px;
+    }
+    nav {
+        flex-basis: 50px;
+    }
+}
+
+
+
+
+
+
